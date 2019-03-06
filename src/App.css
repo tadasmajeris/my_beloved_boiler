@@ -41,7 +41,7 @@ a {
   top: 0;
 }
 
-.boiler:hover h1 {
+.boiler:hover h1, .boiler:hover h3, .boiler:hover h4 {
   color: red;
 }
 
