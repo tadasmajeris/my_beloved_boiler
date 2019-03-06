@@ -2,8 +2,8 @@ import React from 'react';
 import Boiler from './Boiler';
 
 const Boilers = ({boilers}) => (
-  boilers.map((boiler, i) =>
-    <Boiler boiler={boiler} key={i} />
+  boilers.map(boiler =>
+    <Boiler boiler={boiler} key={boiler.id} />
   )
 );
 
