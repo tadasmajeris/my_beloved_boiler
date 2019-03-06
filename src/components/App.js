@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Boilers from './components/Boilers';
+import Boilers from './Boilers';
 import './App.css';
 
 class App extends Component {
