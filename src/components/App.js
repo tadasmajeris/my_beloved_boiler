@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import Boilers from './Boilers';
+import BoilerTV from './BoilerTV';
 import './App.css';
 
 class App extends Component {
   state = {
-    boilers: []
+    boilers: [],
+    selectedYoutubeId: ''
   }
 
   componentDidMount() {
@@ -17,10 +19,15 @@ class App extends Component {
       .then(boilers => this.setState({boilers}))
   }
 
+  onBoilerClick(selectedYoutubeId) {
+    this.setState({selectedYoutubeId});
+  }
+
   render() {
     return (
       <div className="App">
-        <Boilers boilers={this.state.boilers}/>
+        {this.state.selectedYoutubeId ? <BoilerTV youtubeId={this.state.selectedYoutubeId} /> : ''}
+        <Boilers boilers={this.state.boilers} onClick={this.onBoilerClick.bind(this)} />
       </div>
     );
   }
